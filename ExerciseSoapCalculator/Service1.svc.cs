@@ -40,5 +40,13 @@ namespace ExerciseSoapCalculator
 
             return a + b;
         }
+
+        public double Calculate(double a, double b, out double Extract, out double Multiply)
+        {
+            Extract = a - b;
+            Multiply = a * b;
+            
+            return a + b;
+        }
     }
 }

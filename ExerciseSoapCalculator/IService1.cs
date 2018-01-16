@@ -27,7 +27,10 @@ namespace ExerciseSoapCalculator
         double Divide(double a, double b);
 
         [OperationContract]
-        double Calculate(double a, double b, out double extract, out double multiply, out double divide);
+        double Calculate(double a, double b, out double Extract, out double Multiply, out double Divide);
+
+        [OperationContract]
+        double Calculate(double a, double b, out double Extract, out double Multiply);
     }
 
 
