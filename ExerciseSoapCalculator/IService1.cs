@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
@@ -14,12 +15,19 @@ namespace ExerciseSoapCalculator
     {
 
         [OperationContract]
-        string GetData(int value);
+        double Add(double a, double b);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        double Extract(double a, double b);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        double Multiply(double a, double b);
+
+        [OperationContract]
+        double Divide(double a, double b);
+
+        [OperationContract]
+        double Calculate(double a, double b, out double extract, out double multiply, out double divide);
     }
 
 
